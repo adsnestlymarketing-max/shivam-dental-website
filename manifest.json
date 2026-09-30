@@ -1,0 +1,17 @@
+{
+  "name": "Shivam Dental & Maxillofacial Centre",
+  "short_name": "Shivam Dental",
+  "description": "Multi-Specialty Dental & Oral Maxillofacial Surgery Clinic on CGHS Panel, Yamuna Vihar, Delhi",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066CC",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230066CC'><path d='M12 2C8.5 2 6 4.5 6 7.5C6 9.5 7 11.5 8 13.5C9 15.5 9.5 18 10 21C10.2 22 11.2 22 12 22C12.8 22 13.8 22 14 21C14.5 18 15 15.5 16 13.5C17 11.5 18 9.5 18 7.5C18 4.5 15.5 2 12 2Z'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

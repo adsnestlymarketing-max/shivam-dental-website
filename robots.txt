@@ -1,0 +1,9 @@
+# Robots.txt for Shivam Dental & Maxillofacial Centre
+# https://shivamdentalcentre.com
+
+User-agent: *
+Allow: /
+Disallow: /assets/private/
+
+# Sitemap location
+Sitemap: https://shivamdentalcentre.com/sitemap.xml

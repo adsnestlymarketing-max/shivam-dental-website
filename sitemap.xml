@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://shivamdentalcentre.com/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://shivamdentalcentre.com/about.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Specialists / Doctors -->
+  <url>
+    <loc>https://shivamdentalcentre.com/doctors.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Clinical Services -->
+  <url>
+    <loc>https://shivamdentalcentre.com/services.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- CGHS Empanelment & Panel Guide -->
+  <url>
+    <loc>https://shivamdentalcentre.com/cghs-panel.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Contact & Location -->
+  <url>
+    <loc>https://shivamdentalcentre.com/contact.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>
