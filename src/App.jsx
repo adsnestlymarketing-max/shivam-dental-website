@@ -24,7 +24,8 @@ import DoctorsView from './components/views/DoctorsView';
 import ServicesView from './components/views/ServicesView';
 import CGHSView from './components/views/CGHSView';
 
-import { servicesList } from './data/clinicData';
+import { servicesList, clinicInfo } from './data/clinicData';
+import { Phone, MessageSquare, Send } from 'lucide-react';
 
 export default function App() {
   // Exactly 5 views: 'home' | 'about' | 'doctors' | 'services' | 'cghs'
@@ -220,6 +221,22 @@ export default function App() {
         onClose={() => setSelectedBlog(null)}
         onBookAppointment={() => handleOpenEnquiry()}
       />
+
+      {/* Mobile Sticky Quick Action Bar */}
+      <aside className="mobile-floating-bar" aria-label="Quick Mobile Actions">
+        <a href={`tel:${clinicInfo.phone.replace(/\s+/g, '')}`} className="mobile-bar-btn mobile-bar-call">
+          <Phone size={15} />
+          <span>Call Desk</span>
+        </a>
+        <a href={clinicInfo.whatsappUrl} target="_blank" rel="noopener noreferrer" className="mobile-bar-btn mobile-bar-whatsapp">
+          <MessageSquare size={15} />
+          <span>WhatsApp</span>
+        </a>
+        <button onClick={() => handleOpenEnquiry()} className="mobile-bar-btn mobile-bar-enquire">
+          <Send size={15} />
+          <span>Book Slot</span>
+        </button>
+      </aside>
     </div>
   );
 }

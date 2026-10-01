@@ -55,7 +55,7 @@ export default function AboutView({ onOpenEnquiry, onOpenCGHS }) {
               </div>
             </div>
 
-            <div style={{ display: 'flex', gap: '14px', marginTop: '20px' }}>
+            <div style={{ display: 'flex', gap: '14px', marginTop: '20px', flexWrap: 'wrap' }}>
               <button onClick={onOpenEnquiry} className="btn btn-primary btn-pill">
                 <Send size={15} /> Send Quick Enquiry
               </button>

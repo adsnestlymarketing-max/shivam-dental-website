@@ -106,30 +106,13 @@ export default function Header({ onOpenEnquiry, currentView, setCurrentView }) {
 
         {/* Mobile Navigation Drawer */}
         {mobileOpen && (
-          <div style={{
-            background: '#ffffff',
-            borderTop: '1px solid #e2e8f0',
-            padding: '20px 24px',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
-          }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div className="mobile-nav-drawer">
+            <div className="mobile-nav-list">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  style={{
-                    background: currentView === item.id ? '#eef4ff' : 'none',
-                    color: currentView === item.id ? '#386bf6' : '#0d1b3e',
-                    padding: '12px 16px',
-                    borderRadius: '8px',
-                    textAlign: 'left',
-                    fontWeight: 600,
-                    fontSize: '1rem',
-                    border: 'none',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between'
-                  }}
+                  className={`mobile-nav-btn ${currentView === item.id ? 'active' : ''}`}
                 >
                   <span>{item.label}</span>
                   {item.id === 'cghs' && <span className="top-cghs-pill">CGHS</span>}
@@ -138,9 +121,9 @@ export default function Header({ onOpenEnquiry, currentView, setCurrentView }) {
               <button
                 onClick={() => { setMobileOpen(false); onOpenEnquiry(); }}
                 className="btn btn-primary btn-block"
-                style={{ marginTop: '10px' }}
+                style={{ marginTop: '8px' }}
               >
-                <Send size={18} /> Send Enquiry
+                <Send size={16} /> Send Quick Enquiry
               </button>
             </div>
           </div>
