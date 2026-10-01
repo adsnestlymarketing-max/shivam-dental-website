@@ -52,27 +52,27 @@ export default function Footer({ setCurrentView, onOpenCGHS, onOpenEnquiry }) {
               }}>
                 +
               </div>
-              <h3 style={{ color: '#ffffff', fontSize: '1.25rem', fontWeight: 800 }}>
+              <h3 className="footer-brand-title">
                 Shivam Dental
               </h3>
             </div>
 
-            <p style={{ fontSize: '0.88rem', lineHeight: '1.6', marginBottom: '16px' }}>
+            <p style={{ fontSize: '0.88rem', lineHeight: '1.6', marginBottom: '16px', color: '#475569' }}>
               Premier multi-specialty dental and oral maxillofacial surgery centre in Yamuna Vihar, Delhi. Trusted for over 20 years with 7 senior MDS specialists.
             </p>
 
             <div className="footer-cghs-box">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#34d399', fontWeight: 700, fontSize: '0.86rem', marginBottom: '4px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#059669', fontWeight: 700, fontSize: '0.86rem', marginBottom: '4px' }}>
                 <ShieldCheck size={18} /> Empanelled on CGHS Panel
               </div>
-              <p style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>
+              <p style={{ fontSize: '0.8rem', color: '#065f46' }}>
                 Cashless & standardized approved rates for Central Government beneficiaries.
               </p>
             </div>
 
             {/* Social Media Links: YouTube, WhatsApp, Instagram */}
             <div className="footer-social-wrap" style={{ marginTop: '20px' }}>
-              <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 700, marginBottom: '10px' }}>
+              <div className="footer-social-label">
                 Follow & Connect With Us:
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>

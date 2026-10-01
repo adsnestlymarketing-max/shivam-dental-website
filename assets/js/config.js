@@ -16,10 +16,10 @@ const CLINIC_CONFIG = {
   cghsStatus: "Empanelled on CGHS Panel (Central Government Health Scheme)",
   
   contact: {
-    primaryPhone: "+91 98112 34567",
-    primaryPhoneClean: "919811234567",
-    emergencyPhone: "+91 98112 34567",
-    whatsappNumber: "919811234567",
+    primaryPhone: "+91 85270 80186",
+    primaryPhoneClean: "08527080186",
+    emergencyPhone: "+91 85270 80186",
+    whatsappNumber: "918527080186",
     email: "info@shivamdentalcentre.com",
   },
 
@@ -55,7 +55,7 @@ const CLINIC_CONFIG = {
   },
 
   social: {
-    whatsappDirect: "https://wa.me/919811234567?text=Hello%20Shivam%20Dental%20Centre,%20I%20would%20like%20to%20enquire%20about%20dental%20treatment",
+    whatsappDirect: "https://wa.me/918527080186?text=Hello%20Shivam%20Dental%20Centre,%20I%20would%20like%20to%20enquire%20about%20dental%20treatment",
     facebook: "#",
     instagram: "#",
     youtube: "#"

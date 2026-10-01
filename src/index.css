@@ -55,8 +55,15 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root, .app-root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
@@ -70,6 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-dark);
   font-weight: 700;
   line-height: 1.25;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -273,7 +281,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
@@ -289,19 +297,21 @@ img {
   align-items: center;
   justify-content: space-between;
   height: 76px;
+  gap: 12px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .logo-symbol {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   background: var(--primary-blue);
   border-radius: 12px;
   display: flex;
@@ -320,8 +330,8 @@ img {
   position: absolute;
   top: -10px;
   right: -10px;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
 }
@@ -329,6 +339,7 @@ img {
 .brand-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .brand-main {
@@ -338,6 +349,7 @@ img {
   color: var(--text-dark);
   letter-spacing: -0.5px;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand-sub {
@@ -346,6 +358,7 @@ img {
   color: var(--primary-blue);
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .desktop-nav {
@@ -398,7 +411,8 @@ img {
 .header-right-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .mobile-hamburger {
@@ -413,6 +427,7 @@ img {
   color: var(--text-dark);
   cursor: pointer;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .mobile-hamburger:hover {
@@ -424,7 +439,7 @@ img {
 .mobile-nav-drawer {
   background: #ffffff;
   border-top: 1px solid var(--border-light);
-  padding: 20px;
+  padding: 18px 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -484,21 +499,39 @@ img {
   padding-right: 15px;
 }
 
+.hero-cghs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: #eef5ff;
+  color: #386bf6;
+  font-size: 0.84rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border: 1px solid #d8e8fc;
+  max-width: 100%;
+}
+
 .hero-heading {
-  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  font-size: clamp(2rem, 4vw, 3.4rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.16;
   color: var(--text-dark);
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero-subtext {
-  font-size: clamp(0.96rem, 1.8vw, 1.1rem);
+  font-size: clamp(0.96rem, 1.8vw, 1.08rem);
   color: var(--text-body);
   line-height: 1.65;
   margin-bottom: 30px;
   max-width: 540px;
+  overflow-wrap: break-word;
 }
 
 .hero-btn-row {
@@ -676,7 +709,7 @@ img {
    ========================================================================== */
 
 .section-padding {
-  padding: clamp(50px, 8vw, 90px) 0;
+  padding: clamp(48px, 7vw, 90px) 0;
 }
 
 .bg-sky {
@@ -1409,15 +1442,15 @@ img {
 }
 
 /* ==========================================================================
-   FOOTER
+   FOOTER (Light Medical Theme)
    ========================================================================== */
 
 .site-footer {
-  background: #0f172a;
-  color: #94a3b8;
+  background: #f0f6ff;
+  color: #475569;
   padding-top: clamp(50px, 7vw, 80px);
   font-size: 0.9rem;
-  border-top: 1px solid rgba(226, 232, 240, 0.2);
+  border-top: 1.5px solid #d8e8fc;
 }
 
 .footer-grid-4 {
@@ -1428,10 +1461,16 @@ img {
 }
 
 .footer-col h4 {
-  color: #ffffff;
+  color: var(--text-dark);
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 18px;
+}
+
+.footer-brand-title {
+  color: var(--text-dark);
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 
 .footer-links-list {
@@ -1441,23 +1480,36 @@ img {
   gap: 10px;
 }
 
+.footer-links-list a {
+  color: #475569;
+  transition: var(--transition);
+}
+
 .footer-links-list a:hover {
-  color: #ffffff;
+  color: var(--primary-blue);
   padding-left: 4px;
 }
 
 .footer-cghs-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #ffffff;
+  border: 1px solid #a7f3d0;
   padding: 14px 16px;
   border-radius: var(--radius-md);
   margin-top: 14px;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.06);
 }
 
 .footer-cghs-box strong {
-  color: #ffffff;
+  color: #065f46;
   display: block;
   margin-bottom: 4px;
+}
+
+.footer-social-label {
+  font-size: 0.84rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .social-icon-btn {
@@ -1468,14 +1520,16 @@ img {
   align-items: center;
   justify-content: center;
   transition: var(--transition);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .social-icon-btn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 .social-youtube {
@@ -1485,34 +1539,34 @@ img {
 .social-youtube:hover {
   background: #ef4444;
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.35);
   border-color: #ef4444;
 }
 
 .social-whatsapp {
-  color: #22c55e;
+  color: #16a34a;
 }
 
 .social-whatsapp:hover {
-  background: #22c55e;
+  background: #16a34a;
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.4);
-  border-color: #22c55e;
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.35);
+  border-color: #16a34a;
 }
 
 .social-instagram {
-  color: #f43f5e;
+  color: #e11d48;
 }
 
 .social-instagram:hover {
   background: linear-gradient(45deg, #f59e0b, #ec4899, #8b5cf6);
   color: #ffffff;
-  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.35);
   border-color: transparent;
 }
 
 .footer-bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #d8e8fc;
   padding: 22px 0;
   display: flex;
   align-items: center;
@@ -1520,6 +1574,15 @@ img {
   flex-wrap: wrap;
   gap: 14px;
   font-size: 0.84rem;
+  color: #64748b;
+}
+
+.footer-bottom-bar a {
+  color: #64748b;
+}
+
+.footer-bottom-bar a:hover {
+  color: var(--primary-blue);
 }
 
 /* ==========================================================================
@@ -1672,10 +1735,10 @@ img {
 /* Tablets & Small Laptops (max-width: 1024px) */
 @media (max-width: 1024px) {
   .desktop-nav {
-    display: none;
+    display: none !important;
   }
   .mobile-hamburger {
-    display: flex;
+    display: flex !important;
   }
   .hero-grid {
     grid-template-columns: 1fr 1fr;
@@ -1746,30 +1809,158 @@ img {
     padding-bottom: 64px; /* Space for Mobile Quick Action Bar */
   }
 
-  .top-bar {
-    padding: 6px 0;
-  }
-  .top-bar-left, .top-bar-right {
-    gap: 10px;
-  }
-  .top-link {
-    font-size: 0.76rem;
+  .container {
+    padding: 0 16px;
   }
 
+  /* Top Bar Streamlining */
+  .top-bar {
+    padding: 5px 0;
+    font-size: 0.76rem;
+  }
+  .top-bar-inner {
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .top-bar-left {
+    gap: 6px;
+  }
+  .top-bar-left > span:not(.top-cghs-pill) {
+    display: none; /* Hide weekday timings on small screens to save space */
+  }
+  .top-bar-right {
+    gap: 10px;
+  }
+  .top-bar-right > .top-link:last-child {
+    display: none; /* Hide full address in topbar on phone */
+  }
+  .top-link {
+    font-size: 0.74rem;
+  }
+
+  /* Header & Navbar */
   .nav-container {
-    height: 68px;
+    height: 64px;
+    gap: 8px;
+  }
+  .brand-logo {
+    gap: 8px;
+  }
+  .logo-symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    border-radius: 10px;
   }
   .brand-main {
-    font-size: 1.18rem;
+    font-size: 1.15rem;
   }
   .brand-sub {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.5px;
+  }
+
+  .header-enquiry-btn {
+    display: none !important; /* Hide Send Enquiry from Header bar on mobile to guarantee hamburger is always visible */
+  }
+
+  .mobile-hamburger {
+    display: flex !important;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  /* Hero Section */
+  .hero-wrap {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+    width: 100%;
+  }
+
+  .hero-left-content {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-cghs-badge {
+    margin: 0 auto 14px;
+    font-size: 0.76rem;
+    padding: 5px 12px;
+    text-align: center;
+  }
+
+  .hero-heading {
+    font-size: clamp(1.6rem, 6.8vw, 2.3rem);
+    text-align: center;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+
+  .hero-subtext {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    text-align: center;
+    margin: 0 auto 22px;
+    max-width: 100%;
+  }
+
+  .hero-btn-row {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-btn-row .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-right-visual {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0;
+  }
+
+  .hero-blue-blob {
+    width: min(280px, 72vw);
+    height: min(280px, 72vw);
+    margin: 0 auto;
+  }
+
+  .orbit-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .orbit-1 { top: 5px; left: 8px; }
+  .orbit-2 { top: 8px; right: 10px; }
+  .orbit-3 { bottom: 25px; left: -2px; }
+  .orbit-4 { bottom: 30px; right: -2px; }
+
+  /* Hero Floating Card */
+  .hero-floating-card-wrap {
+    margin-top: 30px;
   }
 
   .info-cards-grid {
     grid-template-columns: 1fr;
-    padding: 20px 18px;
+    padding: 20px 16px;
     gap: 16px;
+  }
+
+  .looking-for-bar {
+    padding: 16px;
   }
 
   .pill-filters-row {
@@ -1778,11 +1969,19 @@ img {
     padding-bottom: 6px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    gap: 8px;
   }
   .pill-filters-row::-webkit-scrollbar {
     display: none;
   }
 
+  .filter-pill-btn {
+    font-size: 0.8rem;
+    padding: 7px 14px;
+    flex-shrink: 0;
+  }
+
+  /* Grid Layouts */
   .services-cards-grid,
   .doctors-cards-grid,
   .blog-grid-3,
@@ -1801,7 +2000,7 @@ img {
     flex-direction: column;
     text-align: center;
     gap: 20px;
-    padding: 28px 20px;
+    padding: 28px 18px;
   }
 
   .ribbon-btn {
@@ -1848,6 +2047,7 @@ img {
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+    min-height: 40px;
   }
 
   .mobile-bar-call {
@@ -1871,40 +2071,27 @@ img {
 /* Extra Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 14px;
+    padding: 0 12px;
   }
 
-  .top-bar-right .top-link:nth-child(3) {
-    display: none; /* Hide long address on tiny screens to avoid 4-line wrapping */
+  .brand-main {
+    font-size: 1.05rem;
   }
-
-  .hero-wrap {
-    padding-top: 24px;
-    padding-bottom: 40px;
+  .brand-sub {
+    font-size: 0.52rem;
   }
 
   .hero-blue-blob {
-    width: 260px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
   }
-
-  .orbit-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 0.95rem;
-  }
-
-  .orbit-1 { top: 5px; left: 5px; }
-  .orbit-2 { top: 5px; right: 5px; }
-  .orbit-3 { bottom: 20px; left: -5px; }
-  .orbit-4 { bottom: 20px; right: -5px; }
 
   .panel-logos-row {
     grid-template-columns: 1fr;
   }
 
   .btn-lg {
-    padding: 13px 22px;
+    padding: 13px 20px;
     font-size: 0.95rem;
   }
 
@@ -1917,7 +2104,7 @@ img {
   }
 
   .modal-body {
-    padding: 18px 16px;
+    padding: 18px 14px;
   }
 
   .footer-bottom-bar {

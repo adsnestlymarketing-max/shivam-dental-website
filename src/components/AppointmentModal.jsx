@@ -67,7 +67,7 @@ export default function AppointmentModal({ isOpen, onClose, preselectedDoctor, p
       `*Preferred Date:* ${formData.date}%0A` +
       `*Time Slot:* ${formData.timeSlot}%0A` +
       `*CGHS Beneficiary:* ${formData.isCGHS ? 'Yes (Card: ' + formData.cghsCardNo + ')' : 'No'}`;
-    window.open(`https://wa.me/919811234567?text=${msg}`, '_blank');
+    window.open(`https://wa.me/918527080186?text=${msg}`, '_blank');
   };
 
   return (
@@ -88,7 +88,7 @@ export default function AppointmentModal({ isOpen, onClose, preselectedDoctor, p
               <Calendar size={20} />
             </div>
             <div>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800 }}>Book an Appointment</h3>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800 }}>Send Consultation Enquiry</h3>
               <p style={{ fontSize: '0.78rem', color: '#64748b' }}>Shivam Dental & Maxillofacial Centre (CGHS Panel)</p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function AppointmentModal({ isOpen, onClose, preselectedDoctor, p
                 <CheckCircle2 size={40} />
               </div>
               <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0d1b3e', marginBottom: '8px' }}>
-                Appointment Confirmed!
+                Enquiry Request Sent!
               </h3>
               <p style={{ color: '#475569', fontSize: '0.92rem', marginBottom: '24px', lineHeight: '1.6' }}>
                 Thank you, <strong>{formData.patientName}</strong>! We have reserved your consultation for <strong>{formData.date}</strong> at <strong>{formData.timeSlot}</strong>. Our front desk team will verify details.
@@ -172,7 +172,7 @@ export default function AppointmentModal({ isOpen, onClose, preselectedDoctor, p
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="e.g. +91 98112 34567"
+                    placeholder="e.g. 08527080186"
                     className="form-input"
                   />
                 </div>

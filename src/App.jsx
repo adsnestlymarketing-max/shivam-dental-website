@@ -212,14 +212,14 @@ export default function App() {
       <CGHSModal
         isOpen={isCGHSModalOpen}
         onClose={() => setIsCGHSModalOpen(false)}
-        onBookAppointment={() => handleOpenEnquiry()}
+        onOpenEnquiry={() => handleOpenEnquiry()}
       />
 
       <BlogDetailModal
         post={selectedBlog}
         isOpen={!!selectedBlog}
         onClose={() => setSelectedBlog(null)}
-        onBookAppointment={() => handleOpenEnquiry()}
+        onOpenEnquiry={() => handleOpenEnquiry()}
       />
 
       {/* Mobile Sticky Quick Action Bar */}
@@ -234,7 +234,7 @@ export default function App() {
         </a>
         <button onClick={() => handleOpenEnquiry()} className="mobile-bar-btn mobile-bar-enquire">
           <Send size={15} />
-          <span>Book Slot</span>
+          <span>Send Enquiry</span>
         </button>
       </aside>
     </div>

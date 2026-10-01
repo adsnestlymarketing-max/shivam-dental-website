@@ -10,20 +10,8 @@ export default function Hero({ onOpenEnquiry, onSelectFilter, activeFilter }) {
         <div className="hero-grid">
           {/* Left Text */}
           <div className="hero-left-content">
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '6px 14px',
-              borderRadius: '9999px',
-              background: '#eef5ff',
-              color: '#386bf6',
-              fontSize: '0.85rem',
-              fontWeight: 700,
-              marginBottom: '16px',
-              border: '1px solid #d8e8fc'
-            }}>
-              <Shield size={15} color="#386bf6" />
+            <div className="hero-cghs-badge">
+              <Shield size={14} color="#386bf6" />
               <span>On CGHS Panel • 7 Senior MDS Specialists</span>
             </div>
 

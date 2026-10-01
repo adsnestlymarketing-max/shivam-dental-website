@@ -123,7 +123,7 @@
       const mainForm = document.getElementById('mainEnquiryForm');
       const whatsappNumber = (typeof CLINIC_CONFIG !== 'undefined' && CLINIC_CONFIG.contact) 
         ? CLINIC_CONFIG.contact.whatsappNumber 
-        : '919811234567';
+        : '918527080186';
 
       // 1. Hero / Homepage Quick Form
       if (heroForm) {

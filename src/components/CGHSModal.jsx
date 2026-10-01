@@ -2,7 +2,7 @@ import React from 'react';
 import { clinicInfo } from '../data/clinicData';
 import { X, ShieldCheck, CheckCircle2, FileText, Phone, Calendar } from 'lucide-react';
 
-export default function CGHSModal({ isOpen, onClose, onBookAppointment }) {
+export default function CGHSModal({ isOpen, onClose, onOpenEnquiry }) {
   if (!isOpen) return null;
 
   return (
@@ -91,12 +91,12 @@ export default function CGHSModal({ isOpen, onClose, onBookAppointment }) {
             <button
               onClick={() => {
                 onClose();
-                onBookAppointment(null, null);
+                onOpenEnquiry(null, null);
               }}
               className="btn btn-primary btn-block btn-lg"
               style={{ background: '#059669' }}
             >
-              <Calendar size={18} /> Book CGHS Consultation Slot
+              <Send size={18} /> Send CGHS Enquiry
             </button>
             <a
               href={`tel:${clinicInfo.phone.replace(/\s+/g, '')}`}

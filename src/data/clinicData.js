@@ -2,14 +2,14 @@ export const clinicInfo = {
   name: "Shivam Dental & Maxillofacial Centre",
   shortName: "Shivam Dental",
   tagline: "Empanelled on CGHS Panel | Multi-Specialty Dental & Oral Surgery",
-  phone: "+91 98112 34567",
-  altPhone: "+91 11 2282 3456",
+  phone: "+91 85270 80186",
+  altPhone: "08527080186",
   email: "contact@shivamdentalcentre.com",
   cghsEmail: "cghs@shivamdentalcentre.com",
   address: "C-1/23, First Floor, Block C, Yamuna Vihar, Delhi - 110053",
   landmark: "Near Yamuna Vihar Central Park / Petrol Pump",
   hoursWeekday: "Mon - Sat: 10:00am to 8:00pm",
-  hoursSunday: "Sun: 10:00am to 2:00pm (By Appointment)",
+  hoursSunday: "Sun: 10:00am to 2:00pm (By Prior Enquiry)",
   cghsCode: "DEL-CGHS-DENT-2024",
   rating: "4.9",
   reviewsCount: "500+",
@@ -17,11 +17,11 @@ export const clinicInfo = {
   patientCount: "15,000+",
   treatmentsCount: "145+",
   mapUrl: "https://www.google.com/maps/dir/?api=1&destination=shivam+ortho+%26+spine+care+center,+C-1/23,+Block+C,+Yamuna+Vihar,+Delhi,+110053",
-  whatsappUrl: "https://wa.me/919811234567?text=Hello%20Shivam%20Dental%20Centre,%20I%20would%20like%20to%20book%20a%20consultation",
+  whatsappUrl: "https://wa.me/918527080186?text=Hello%20Shivam%20Dental%20Centre,%20I%20have%20an%20enquiry",
   socialLinks: {
     youtube: "https://www.youtube.com/@shivamdentalcentre", // Update YouTube link here
     instagram: "https://www.instagram.com/shivamdentalcentre", // Update Instagram link here
-    whatsapp: "https://wa.me/919811234567?text=Hello%20Shivam%20Dental%20Centre,%20I%20have%20an%20enquiry" // Update WhatsApp link here
+    whatsapp: "https://wa.me/918527080186?text=Hello%20Shivam%20Dental%20Centre,%20I%20have%20an%20enquiry" // Update WhatsApp link here
   }
 };
 
@@ -357,7 +357,7 @@ export const testimonialsList = [
     role: "Clear Aligners Patient, Delhi",
     avatar: "👨‍💻",
     rating: "4.9",
-    comment: "Dr. Deepak Tomar’s clear aligner treatment transformed my smile in just 7 months. The modern clinic atmosphere and flexible appointment hours made it super convenient."
+    comment: "Dr. Deepak Tomar’s clear aligner treatment transformed my smile in just 7 months. The modern clinic atmosphere and flexible consultation hours made it super convenient."
   }
 ];
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { clinicInfo } from '../../data/clinicData';
 import { MapPin, Phone, Mail, Clock, MessageSquare, Send, CheckCircle2, Navigation } from 'lucide-react';
 
-export default function ContactView({ onOpenAppointment }) {
+export default function ContactView({ onOpenEnquiry }) {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '', panel: 'general' });
 
@@ -20,7 +20,7 @@ export default function ContactView({ onOpenAppointment }) {
             Contact & Clinic Location
           </h1>
           <p style={{ maxWidth: '650px', margin: '0 auto', color: '#64748b', fontSize: '1rem' }}>
-            Located conveniently in Yamuna Vihar, Delhi. Walk-ins and pre-booked appointments welcome.
+            Located conveniently in Yamuna Vihar, Delhi. Walk-ins and patient enquiries welcome.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ export default function ContactView({ onOpenAppointment }) {
                       required
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="+91 98112 34567"
+                      placeholder="08527080186"
                       className="form-input"
                     />
                   </div>

@@ -31,31 +31,6 @@ export default function Header({ onOpenEnquiry, currentView, setCurrentView }) {
 
   return (
     <>
-      {/* Top Utility Bar */}
-      <aside className="top-bar">
-        <div className="container top-bar-inner">
-          <div className="top-bar-left">
-            <span className="top-cghs-pill" onClick={() => handleNavClick('cghs')} style={{ cursor: 'pointer' }}>
-              <ShieldCheck size={14} /> On CGHS Panel Empanelled
-            </span>
-            <span className="top-link">
-              <Clock size={14} /> {clinicInfo.hoursWeekday}
-            </span>
-          </div>
-          <div className="top-bar-right">
-            <a href={`tel:${clinicInfo.phone.replace(/\s+/g, '')}`} className="top-link">
-              <Phone size={14} /> {clinicInfo.phone}
-            </a>
-            <a href={clinicInfo.whatsappUrl} target="_blank" rel="noopener noreferrer" className="top-link top-whatsapp">
-              <MessageSquare size={14} /> WhatsApp
-            </a>
-            <a href={clinicInfo.mapUrl} target="_blank" rel="noopener noreferrer" className="top-link">
-              <MapPin size={14} /> Yamuna Vihar, Delhi
-            </a>
-          </div>
-        </div>
-      </aside>
-
       {/* Main Navigation Bar */}
       <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
@@ -88,7 +63,7 @@ export default function Header({ onOpenEnquiry, currentView, setCurrentView }) {
           <div className="header-right-actions">
             <button
               onClick={onOpenEnquiry}
-              className="btn btn-primary btn-sm btn-pill"
+              className="btn btn-primary btn-sm btn-pill header-enquiry-btn"
             >
               <Send size={15} />
               <span>Send Enquiry</span>

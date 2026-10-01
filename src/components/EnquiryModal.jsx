@@ -49,7 +49,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedDoctor, prese
       (srv ? `*Service:* ${srv.title}%0A` : '') +
       `*CGHS Cardholder:* ${formData.isCGHS ? 'Yes' : 'No'}%0A` +
       `*Message:* ${formData.message || 'I would like to get information regarding treatment.'}`;
-    window.open(`https://wa.me/919811234567?text=${text}`, '_blank');
+    window.open(`https://wa.me/918527080186?text=${text}`, '_blank');
   };
 
   return (
@@ -151,7 +151,7 @@ export default function EnquiryModal({ isOpen, onClose, preselectedDoctor, prese
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="e.g. +91 98112 34567"
+                    placeholder="e.g. 08527080186"
                     className="form-input"
                   />
                 </div>

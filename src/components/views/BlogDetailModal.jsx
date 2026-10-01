@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 
-export default function BlogDetailModal({ post, isOpen, onClose, onBookAppointment }) {
+export default function BlogDetailModal({ post, isOpen, onClose, onOpenEnquiry }) {
   if (!isOpen || !post) return null;
 
   return (
@@ -44,11 +44,11 @@ export default function BlogDetailModal({ post, isOpen, onClose, onBookAppointme
           <button
             onClick={() => {
               onClose();
-              onBookAppointment();
+              onOpenEnquiry();
             }}
             className="btn btn-primary btn-block btn-lg"
           >
-            Schedule Consultation with Our Specialists
+            Send Quick Enquiry
           </button>
         </div>
       </div>
